@@ -3,3 +3,15 @@ branding:
   logo: "/uploads/pathfinderscleanlogo2.png"
   favicon: "/uploads/pathfinderscleanlogo2.png"
   site_title: Path Finders Clean
+header:
+  text: ''
+home:
+  splash:
+    image: "/uploads/clean-living-room.jpg"
+    hero_heading: PATHFINDERS CARPET & RUG CLEANING
+    hero_subtitle: FAMILY OWNED & OPERATED SINCE 1976
+    body: Our service techs are clean, courteous, polite and hard working. Get those
+      nasty stains and terrible odors out of your carpet today!
+footer:
+  logo: ''
+  footer_bio: ''
