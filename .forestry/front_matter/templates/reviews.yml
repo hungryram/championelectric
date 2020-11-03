@@ -1,0 +1,65 @@
+---
+label: Reviews
+hide_body: true
+fields:
+- name: reviews
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: review
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Review
+  - name: stars
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Stars
+  - name: source
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Facebook
+      - Yelp
+      - Google
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Source
+  - name: review_date
+    type: text
+    config:
+      required: false
+    label: Review Date
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Reviews
+pages:
+- content/reviews/_index.md

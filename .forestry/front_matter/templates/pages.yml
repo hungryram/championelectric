@@ -1,0 +1,27 @@
+---
+label: Pages
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+pages:
+- content/carpet-cleaning-baytown-tx.md
+- content/carpet-cleaning-deer-park-tx.md
+- content/carpet-cleaning-friendswood-tx.md
+- content/carpet-cleaning-league-city-tx.md
+- content/carpet-cleaning-mont-belvieu-texas.md
+- content/carpet-cleaning-pearland-texas.md
+- content/carpet-cleaning-seabrook-texas.md

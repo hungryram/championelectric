@@ -1,0 +1,56 @@
+<!-- Hero head: will stick at the top -->
+<div class="top-bar">
+  <div class="container">
+    <p class="is-size-8">Water Extraction & Flood Damage 24hr EMERGENCY SERVICE</p>
+  </div>
+</div>
+
+<div class="hero-head">
+ <nav class="navbar is-transparent">
+   <div class="container">
+     <div class="navbar-brand">
+       <a class="navbar-item" href="{{ .Site.BaseURL }}">
+         {{ if .Site.Data.appearance.branding.logo }}
+           <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.primary_company_name }}">
+         {{ else }}
+         <h1 class="title is-3">{{ .Site.Data.design.logo_and_title.site_title }}</h1>
+         {{ end }}
+       </a>
+       <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+         <span></span>
+         <span></span>
+         <span></span>
+       </span>
+     </div>
+     <div id="navbarMenuHeroA" class="navbar-menu">
+       <div class="navbar-end">
+     {{ $currentPage := . }}
+     {{ range .Site.Menus.main }}
+     {{ if .HasChildren }}
+         <div class="navbar-item has-dropdown is-hoverable main-drop">
+             <a class="navbar-link" href="javascript:;">
+                 {{ .Name }}
+             </a>
+             <!-- First Level Dropdown -->
+                 <div class="navbar-dropdown">
+                     {{ range .Children }}
+                         
+                         <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                         {{ .Name }}
+                         </a>
+                     
+                     {{ end }}
+               </div>
+               <!-- End first level Dropdown -->
+         </div>
+         {{ else }} <!-- Else No Drop Down-->
+         <a href="{{ .URL |absURL }}" class="navbar-item">{{ .Name }}</a>
+     {{ end }}
+     {{ end }} <!-- End range menu -->
+     <a href="https://www.housecallpro.com/book/AAA-Pathfinders-Cleaning-Services/e5c1846efa0247f49e8bd302a298159c" target="_blank" class="navbar-item">Book Now</a>
+
+   </div>
+ </div>
+   </div>
+ </nav>
+</div>

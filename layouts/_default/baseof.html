@@ -1,0 +1,24 @@
+{{ partial "global/head" . }}
+{{ partial "global/navbar.html" . }}
+
+{{ with .Params.featured_image }}
+<div class="page-banner" style="background:url({{ . }})no-repeat center;background-size:cover;height:25vh">
+{{ else }}
+<div class="page-banner" style="background:url(/uploads/pressure-wash.jpg)no-repeat center;background-size:cover;height:25vh">
+{{ end }}
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+{{ block "main" . }}
+
+{{ end }}
+</main>
+{{ partial "global/footer.html" . }}
