@@ -1,5 +1,7 @@
 {{ define "main" }}
 <div class="section">
+  {{ $contact := .Site.Data.profile.contact_information }}
+
     <div class="container">
         <div class="columns is-variable is-8">
             <div class="column">
@@ -13,7 +15,7 @@
                         </svg>
                     </div>
                     <div class="column has-text-left">
-                        <p>916 Vista Rd. Pasadena, TX 77504</p>
+                        <p>{{ $contact.address }}</p>
                     </div>
                 </div>
                 <div class="columns">
@@ -25,7 +27,7 @@
                           </svg>
                     </div>
                     <div class="column has-text-left">
-                        <p><a href="mailto:ebittick@pathfinderscarpetcleaning.com" class="has-text-black">ebittick@pathfinderscarpetcleaning.com</a></p>
+                        <p><a href="mailto:{{ $contact.email }}" class="has-text-black">{{ $contact.email }}</a></p>
                     </div>
                 </div>
                 <div class="columns">
