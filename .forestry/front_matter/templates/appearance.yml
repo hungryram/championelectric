@@ -22,5 +22,15 @@ fields:
       maxSize: 1
     label: Favicon
   label: Branding
+- name: header
+  type: field_group
+  config: {}
+  fields:
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Text
+  label: Header
 pages:
 - data/appearance.yaml
